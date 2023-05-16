@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(./images/bg-pattern-desktop.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  background-image: linear-gradient(135deg, hsl(0, 0% 100%), hsl(0, 100% 98%));
+}
+
+/* ### Primary
+
+- Desaturated Red: hsl(0, 36%, 70%)
+- Soft Red: hsl(0, 93%, 68%)
+
+### Neutral
+
+- Dark Grayish Red: hsl(0, 6%, 24%)
+
+### Gradients
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
+
+body {
+  min-height: 100vh;
+}
+
+header {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  padding: 3rem 11rem;
+}
+header img {
+  width: 150px;
+}
+.main__container {
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  width: 1440px;
+  max-width: 100%;
+}
+
+.left__container {
+  padding: 3rem 11rem 11rem 11rem;
+  height: 600px;
+  max-height: 100%;
+}
+.left__container h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  padding: 5rem 0 1.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.45rem;
+  color: hsl(0, 6%, 24%);
+  line-height: 3rem;
+}
+.left__container p,
+span {
+  color: hsl(0, 74%, 74%);
+  font-weight: 300;
+}
+.left__container p {
+  color: hsl(0, 74%, 74%);
+  font-weight: 300;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.right__container img {
+  height: 600px;
+  width: 100%;
+}
+.left__container form {
+  background-color: hsl(0, 74%, 74%);
+  position: relative;
+  border-radius: 1.5rem;
+  height: 2.6rem;
+  width: 100%;
+}
+.left__container form input {
+  font-family: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: hsl(0, 36%, 70%) solid 0.1rem;
+  background-color: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.5rem;
+  margin: 2.5rem 0;
+  /* display: absolute; */
+  outline: none;
+}
+input:focus {
+  outline: none;
+  box-shadow: 2px 5px 10px hsla(0, 36%, 70%, 0.5);
+}
+input::placeholder {
+  color: hsl(0, 74%, 74%);
+  opacity: 0.6;
+}
+button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4.5rem;
+  height: 100%;
+  border-radius: 1.5rem;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  box-shadow: 2px 5px 10px hsla(0, 36%, 70%, 0.5);
+  border: none;
+  cursor: pointer;
+}
+
+.icon-error {
+  display: inline-block;
+  position: absolute;
+  top: 25%;
+  right: 80px;
+  display: none;
+}
+.icon-arrow {
+  padding: 0.5rem;
+  width: 40%;
+  max-width: 100%;
+}
+.error-message {
+  position: absolute;
+  left: 30px;
+  top: 55px;
+  display: none;
+}
+#inval {
+  color: hsl(0, 93%, 68%);
+  font-weight: bold;
+}
+button:hover {
+  box-shadow: 2px 2px 10px 1px rgba(86, 85, 85, 0.3);
+  background-image: linear-gradient(135deg, hsl(0, 36%, 70%), hsl(0, 93%, 68%));
+  opacity: 0.6;
+}
+.error-icon {
+  display: block;
+}
+button .error-message {
+  display: block;
+}
+.attribution {
+  font-size: 14px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 600px) {
+  .main__container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    margin: 30px 0;
+    width: 150px;
+  }
+  h1 {
+    padding-top: 0px;
+  }
+  header {
+    padding: 3rem;
+  }
+  .left__container h1 {
+    font-size: 2rem;
+  }
+  .left__container {
+    text-align: center;
+    padding: 3rem;
+    padding-top: 0;
+    margin: 0 auto;
+  }
+  .right__container img {
+    max-width: 100%;
+    height: 300px;
+    margin-top: 8rem;
+    object-fit: contain;
+  }
+}
